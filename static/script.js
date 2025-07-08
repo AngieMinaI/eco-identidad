@@ -45,7 +45,7 @@ async function toggleGrabacion() {
       formData.append("audio", blob, "grabacion.webm");
 
       try {
-        const response = await fetch("http://127.0.0.1:5000/procesar_audio", {
+        const response = await fetch("/procesar_audio", {
           method: "POST",
           body: formData
         });
@@ -68,7 +68,7 @@ async function toggleGrabacion() {
         generoTexto.textContent = data.genero === "hombre" ? "HOMBRE" : "MUJER";
         generoTexto.style.display = "block";
 
-        audioRespuesta = new Audio(`http://127.0.0.1:5000/audio?t=${Date.now()}`);
+        audioRespuesta = new Audio(`/audio?t=${Date.now()}`);
         audioRespuesta.play();
       } catch (error) {
         status.textContent = "❌ Error de red";
