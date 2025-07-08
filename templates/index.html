@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco de identidad</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+  <!-- Pantalla de portada -->
+  <div id="pantalla-portada">
+    <h1>ECO DE IDENTIDAD</h1>
+    <h3>¿Eres hombre o mujer? La voz que tú tienes lo dirá </h3>
+    <h3>Utiliza un micrófono</h3>
+    <p id="presiona-r">Presiona R para comenzar</p>
+    <h3>Desarrollado por: Angie Mina Ishuiza</h3>
+  </div>
+
+  <!-- Pantalla principal del sistema -->
+  <div id="app-container" style="display: none;">
+    <h1 class="titulo-blanco">🎤 Tu voz, tu reflejo</h1>
+    <div>
+      <button id="botonGrabacion" onclick="toggleGrabacion()">🎙 Grabar Voz</button>
+    </div>
+    <p id="status">Haz clic para comenzar</p>
+    <p id="resultado"></p>
+    <img id="avatar" src="" alt="Avatar" />
+    <p id="generoTexto"></p>
+  </div>
+
+</body>
+</html>
